@@ -1,0 +1,10 @@
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/bin/Debug/netcoreapp1.1/mvcmusicstore.db
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/bin/Debug/netcoreapp1.1/mvcmusicstore.deps.json
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/bin/Debug/netcoreapp1.1/mvcmusicstore.runtimeconfig.json
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/bin/Debug/netcoreapp1.1/mvcmusicstore.runtimeconfig.dev.json
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/bin/Debug/netcoreapp1.1/mvcmusicstore.dll
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/bin/Debug/netcoreapp1.1/mvcmusicstore.pdb
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/obj/Debug/netcoreapp1.1/UserSecretsAssemblyInfo.cs
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/obj/Debug/netcoreapp1.1/mvcmusicstore.AssemblyInfo.cs
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/obj/Debug/netcoreapp1.1/mvcmusicstore.dll
+/home/edoardozanoni/Scrivania/Projects/mvcmusicstore/obj/Debug/netcoreapp1.1/mvcmusicstore.pdb
