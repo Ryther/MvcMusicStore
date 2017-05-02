@@ -14,7 +14,6 @@ namespace mvcmusicstore.Data
             : base(options)
         {
         }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -22,5 +21,11 @@ namespace mvcmusicstore.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        public DbSet<mvcmusicstore.Models.Album> Album { get; set; }
+
+        public DbSet<mvcmusicstore.Models.Review> Review { get; set; }
+
+        public DbSet<mvcmusicstore.Models.Artist> Artist { get; set; }
     }
 }
