@@ -22,7 +22,7 @@ namespace mvcmusicstore.Data.Migrations
                 {
                     ArtistID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -56,8 +56,8 @@ namespace mvcmusicstore.Data.Migrations
                     ReviewID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     AlbumID = table.Column<int>(nullable: false),
-                    Contents = table.Column<string>(nullable: true),
-                    ReviewerEmail = table.Column<string>(nullable: true)
+                    Contents = table.Column<string>(nullable: false),
+                    ReviewerEmail = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

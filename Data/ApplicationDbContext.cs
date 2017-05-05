@@ -22,10 +22,10 @@ namespace mvcmusicstore.Data
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        public DbSet<mvcmusicstore.Models.Album> Album { get; set; }
+        public DbSet<Album> Album { get; set; }
 
-        public DbSet<mvcmusicstore.Models.Review> Review { get; set; }
+        public DbSet<Review> Review { get; set; }
 
-        public DbSet<mvcmusicstore.Models.Artist> Artist { get; set; }
+        public DbSet<Artist> Artist { get; set; }
     }
 }

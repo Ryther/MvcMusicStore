@@ -1,17 +1,10 @@
 @model mvcmusicstore.Models.Album
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Details";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+<h2>Details</h2>
 
 <div>
     <h4>Album</h4>
@@ -27,7 +20,7 @@
             @Html.DisplayNameFor(model => model.Artist)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Artist.ArtistID)
+            @Html.DisplayFor(model => model.Artist.Name)
         </dd>
     </dl>
 </div>
@@ -35,5 +28,3 @@
     <a asp-action="Edit" asp-route-id="@Model.AlbumID">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
-</body>
-</html>

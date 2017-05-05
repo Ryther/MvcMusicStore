@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using mvcmusicstore.Data;
 using mvcmusicstore.Models;
 
-namespace mvcmusicstore
+namespace mvcmusicstore.Controllers
 {
     public class ReviewController : Controller
     {
@@ -48,7 +48,7 @@ namespace mvcmusicstore
         // GET: Review/Create
         public IActionResult Create()
         {
-            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "AlbumID");
+            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "Title");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace mvcmusicstore
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "AlbumID", review.AlbumID);
+            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "Title", review.AlbumID);
             return View(review);
         }
 
@@ -82,7 +82,7 @@ namespace mvcmusicstore
             {
                 return NotFound();
             }
-            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "AlbumID", review.AlbumID);
+            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "Title", review.AlbumID);
             return View(review);
         }
 
@@ -118,7 +118,7 @@ namespace mvcmusicstore
                 }
                 return RedirectToAction("Index");
             }
-            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "AlbumID", review.AlbumID);
+            ViewData["AlbumID"] = new SelectList(_context.Album, "AlbumID", "Title", review.AlbumID);
             return View(review);
         }
 

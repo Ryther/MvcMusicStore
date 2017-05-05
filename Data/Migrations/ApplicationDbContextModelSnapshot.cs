@@ -193,7 +193,8 @@ namespace mvcmusicstore.Data.Migrations
                     b.Property<int>("ArtistID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ArtistID");
 
@@ -207,9 +208,11 @@ namespace mvcmusicstore.Data.Migrations
 
                     b.Property<int>("AlbumID");
 
-                    b.Property<string>("Contents");
+                    b.Property<string>("Contents")
+                        .IsRequired();
 
-                    b.Property<string>("ReviewerEmail");
+                    b.Property<string>("ReviewerEmail")
+                        .IsRequired();
 
                     b.HasKey("ReviewID");
 

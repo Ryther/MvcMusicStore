@@ -8,7 +8,7 @@ using mvcmusicstore.Data;
 namespace mvcmusicstore.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170502004932_Test")]
+    [Migration("20170505102404_Test")]
     partial class Test
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -194,7 +194,8 @@ namespace mvcmusicstore.Data.Migrations
                     b.Property<int>("ArtistID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ArtistID");
 
@@ -208,9 +209,11 @@ namespace mvcmusicstore.Data.Migrations
 
                     b.Property<int>("AlbumID");
 
-                    b.Property<string>("Contents");
+                    b.Property<string>("Contents")
+                        .IsRequired();
 
-                    b.Property<string>("ReviewerEmail");
+                    b.Property<string>("ReviewerEmail")
+                        .IsRequired();
 
                     b.HasKey("ReviewID");
 

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using mvcmusicstore.Data;
 using mvcmusicstore.Models;
 
-namespace mvcmusicstore
+namespace mvcmusicstore.Controllers
 {
     public class AlbumController : Controller
     {
@@ -48,7 +48,7 @@ namespace mvcmusicstore
         // GET: Album/Create
         public IActionResult Create()
         {
-            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "ArtistID");
+            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace mvcmusicstore
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "ArtistID", album.ArtistID);
+            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "Name", album.ArtistID);
             return View(album);
         }
 
@@ -82,7 +82,7 @@ namespace mvcmusicstore
             {
                 return NotFound();
             }
-            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "ArtistID", album.ArtistID);
+            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "Name", album.ArtistID);
             return View(album);
         }
 
@@ -118,7 +118,7 @@ namespace mvcmusicstore
                 }
                 return RedirectToAction("Index");
             }
-            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "ArtistID", album.ArtistID);
+            ViewData["ArtistID"] = new SelectList(_context.Artist, "ArtistID", "Name", album.ArtistID);
             return View(album);
         }
 
